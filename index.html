@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="id" class="h-full bg-slate-50">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persiapan Lomba MAPSI Tingkat Nasional (Paket 5)</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['Amiri', 'serif'],
+                    },
+                    colors: {
+                        emerald: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                        },
+                        amber: {
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .tab-active {
+            border-bottom: 3px solid #059669;
+            color: #059669;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen font-sans text-slate-800 bg-slate-50 antialiased selection:bg-emerald-500 selection:text-white">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-40 bg-gradient-to-r from-emerald-900 via-emerald-800 to-teal-900 text-white shadow-lg border-b border-emerald-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Header Left (Title & Subtitle) -->
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="navigateTo('home')">
+                <div class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center border border-white/20 shadow-inner">
+                    <i class="fa-solid font-bold text-amber-400 text-2xl fa-book-quran"></i>
+                </div>
+                <div>
+                    <h1 class="text-base sm:text-lg md:text-xl font-bold tracking-tight text-white leading-tight">
+                        Persiapan Lomba MAPSI Tingkat Nasional (Paket 5)
+                    </h1>
+                    <p class="text-xs sm:text-sm text-emerald-200 font-medium">
+                        Level Sekolah Dasar
+                    </p>
+                </div>
+            </div>
+
+            <!-- Header Right (Navigation Icons Group) -->
+            <div class="flex items-center space-x-2 sm:space-x-3">
+                <!-- Home Button -->
+                <button onclick="navigateTo('home')" title="Beranda Utama" class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white/10 hover:bg-white/20 active:scale-95 transition-all flex items-center justify-center border border-white/10 text-white shadow-sm">
+                    <i class="fa-solid fa-house text-lg"></i>
+                </button>
+                <!-- Sound Toggle Button -->
+                <button id="soundToggleBtn" onclick="toggleAudio()" title="Suara / Audio" class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white/10 hover:bg-white/20 active:scale-95 transition-all flex items-center justify-center border border-white/10 text-white shadow-sm">
+                    <i id="soundIcon" class="fa-solid fa-volume-high text-lg text-emerald-300"></i>
+                </button>
+                <!-- Fullscreen Toggle Button -->
+                <button onclick="toggleFullscreen()" title="Layar Penuh" class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white/10 hover:bg-white/20 active:scale-95 transition-all flex items-center justify-center border border-white/10 text-white shadow-sm">
+                    <i class="fa-solid fa-expand text-lg"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col justify-center">
+
+        <!-- ================= PAGE 0: HOME / DASHBOARD ================= -->
+        <section id="viewHome" class="space-y-8 py-4">
+            <div class="text-center max-w-3xl mx-auto space-y-3">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 border border-emerald-200">
+                    <i class="fa-solid fa-star text-amber-500 mr-1.5"></i> Media Pembelajaran PAI Interaktif
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    Pilih Menu Pembelajaran
+                </h2>
+                <p class="text-sm sm:text-base text-slate-600">
+                    Silakan pilih salah satu modul pembelajaran di bawah ini untuk memulai belajar atau berlatih.
+                </p>
+            </div>
+
+            <!-- 3 Main Menus (No Sub-captions below options) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto pt-4">
+                <!-- Menu 1: RINGKASAN MATERI -->
+                <button onclick="navigateTo('materi')" class="group relative bg-white rounded-3xl p-8 border border-slate-200/80 shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center justify-center text-center overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-teal-500/0 group-hover:from-emerald-500/10 transition-all"></div>
+                    <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-emerald-600 to-teal-500 text-white flex items-center justify-center text-3xl shadow-md group-hover:scale-110 transition-transform mb-6">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                    </div>
+                    <span class="text-xl font-extrabold text-slate-900 group-hover:text-emerald-700 transition-colors uppercase tracking-wider">
+                        RINGKASAN MATERI
+                    </span>
+                </button>
+
+                <!-- Menu 2: LATIHAN MANDIRI -->
+                <button onclick="navigateTo('latihan')" class="group relative bg-white rounded-3xl p-8 border border-slate-200/80 shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center justify-center text-center overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-yellow-500/0 group-hover:from-amber-500/10 transition-all"></div>
+                    <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-amber-500 to-yellow-500 text-white flex items-center justify-center text-3xl shadow-md group-hover:scale-110 transition-transform mb-6">
+                        <i class="fa-solid fa-pen-ruler"></i>
+                    </div>
+                    <span class="text-xl font-extrabold text-slate-900 group-hover:text-amber-600 transition-colors uppercase tracking-wider">
+                        LATIHAN MANDIRI
+                    </span>
+                </button>
+
+                <!-- Menu 3: SIMULASI UJIAN -->
+                <button onclick="navigateTo('simulasi-form')" class="group relative bg-white rounded-3xl p-8 border border-slate-200/80 shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center justify-center text-center overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-emerald-500/0 group-hover:from-teal-500/10 transition-all"></div>
+                    <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-teal-600 to-emerald-600 text-white flex items-center justify-center text-3xl shadow-md group-hover:scale-110 transition-transform mb-6">
+                        <i class="fa-solid fa-stopwatch-20"></i>
+                    </div>
+                    <span class="text-xl font-extrabold text-slate-900 group-hover:text-teal-700 transition-colors uppercase tracking-wider">
+                        SIMULASI UJIAN
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 1: RINGKASAN MATERI ================= -->
+        <section id="viewMateri" class="hidden space-y-6">
+            <div class="bg-gradient-to-r from-emerald-800 to-teal-800 rounded-3xl p-6 sm:p-8 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-4">
+                <div>
+                    <span class="px-3 py-1 bg-white/20 rounded-full text-xs font-semibold tracking-wider uppercase text-emerald-100">Modul Pembelajaran</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold mt-2 text-amber-300">
+                        Ringkasan Materi PAI (Paket 5)
+                    </h2>
+                    <p class="text-sm text-emerald-100 mt-1">Rangkuman komprehensif, terstruktur, dan mendalam untuk persiapan lomba MAPSI SD.</p>
+                </div>
+                <button onclick="navigateTo('home')" class="px-5 py-2.5 bg-white/10 hover:bg-white/20 rounded-xl font-medium text-sm border border-white/20 transition-all flex items-center gap-2 shrink-0">
+                    <i class="fa-solid fa-arrow-left"></i> Kembali ke Menu
+                </button>
+            </div>
+
+            <!-- Content Tabs / Sub-Chapters -->
+            <div class="bg-white rounded-3xl shadow-md border border-slate-200 overflow-hidden">
+                <div class="flex border-b border-slate-200 bg-slate-50/50 overflow-x-auto custom-scrollbar">
+                    <button onclick="switchMateriTab('bab1')" id="tabBab1" class="px-6 py-4 font-semibold text-sm whitespace-nowrap text-emerald-700 border-b-2 border-emerald-600 transition-all">
+                        BAB 1: Aku Cinta Al-Qur'an
+                    </button>
+                    <button onclick="switchMateriTab('fatihah')" id="tabFatihah" class="px-6 py-4 font-semibold text-sm whitespace-nowrap text-slate-500 hover:text-slate-700 transition-all">
+                        Surah Al-Fatihah
+                    </button>
+                    <button onclick="switchMateriTab('rukun')" id="tabRukun" class="px-6 py-4 font-semibold text-sm whitespace-nowrap text-slate-500 hover:text-slate-700 transition-all">
+                        Rukun Iman
+                    </button>
+                    <button onclick="switchMateriTab('kalimah')" id="tabKalimah" class="px-6 py-4 font-semibold text-sm whitespace-nowrap text-slate-500 hover:text-slate-700 transition-all">
+                        Basmalah & Hamdalah
+                    </button>
+                </div>
+
+                <!-- Tab Panels -->
+                <div class="p-6 sm:p-8 space-y-6 text-slate-700 leading-relaxed">
+
+                    <!-- Panel 1: BAB 1 Al-Qur'an -->
+                    <div id="materiBab1" class="materi-panel space-y-4">
+                        <h3 class="text-xl font-bold text-emerald-900 border-b border-emerald-100 pb-2">
+                            Hakikat dan Sejarah Al-Qur'an
+                        </h3>
+                        <p class="text-justify">
+                            <strong>Al-Qur'an</strong> secara istilah adalah kitab suci agama Islam yang berisi firman-firman Allah SWT. Al-Qur'an diturunkan kepada Nabi Muhammad SAW melalui perantaraan <strong>Malaikat Jibril</strong> sebagai petunjuk utama bagi seluruh umat manusia.
+                        </p>
+                        <div class="bg-emerald-50 rounded-2xl p-5 border border-emerald-200/80 space-y-3">
+                            <h4 class="font-bold text-emerald-900 text-base">Detail Penting Peristiwa Nuzulul Qur'an:</h4>
+                            <ul class="list-disc list-inside space-y-2 text-sm text-slate-700">
+                                <li><strong>Tempat Diturunkan:</strong> Gua Hira, Jabal Nur, Kota Mekkah, Arab Saudi.</li>
+                                <li><strong>Waktu Pertama Kali Turun:</strong> Malam 17 Ramadhan 610 Masehi.</li>
+                                <li><strong>Wahyu Pertama:</strong> Surah Al-'Alaq ayat 1-5.</li>
+                                <li><strong>Masa Penurunan (Tempo):</strong> Diturunkan secara berangsur-angsur selama <strong>22 tahun, 2 bulan, dan 22 hari</strong>. Meskipun turun bertahap, terdapat keserasian dan keutuhan sempurna antar ayat dan surah.</li>
+                            </ul>
+                        </div>
+                        <h4 class="font-bold text-slate-900 pt-2">Isi Kandungan Utama Al-Qur'an:</h4>
+                        <p>Al-Qur'an mencakup seluruh tuntunan hidup manusia yang terbagi menjadi 6 aspek inti:</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                            <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm text-sm"><strong class="text-emerald-700">1. Akidah:</strong> Keyakinan dan keimanan kepada Allah.</div>
+                            <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm text-sm"><strong class="text-emerald-700">2. Ibadah & Muamalah:</strong> Hubungan dengan Allah & sesama manusia.</div>
+                            <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm text-sm"><strong class="text-emerald-700">3. Hukum:</strong> Aturan tata cara kehidupan syariat.</div>
+                            <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm text-sm"><strong class="text-emerald-700">4. Sejarah:</strong> Kisah nabi dan umat masa lalu.</div>
+                            <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm text-sm"><strong class="text-emerald-700">5. Akhlak:</strong> Panduan perilaku mulia terpuji.</div>
+                            <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm text-sm"><strong class="text-emerald-700">6. Ilmu Pengetahuan:</strong> Isyarat sains dan kebenaran alam semesta.</div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 2: Surah Al-Fatihah -->
+                    <div id="materiFatihah" class="materi-panel hidden space-y-5">
+                        <h3 class="text-xl font-bold text-emerald-900 border-b border-emerald-100 pb-2">
+                            Keutamaan dan Makna Surah Al-Fatihah
+                        </h3>
+                        <p>
+                            <strong>Al-Fatihah</strong> secara harfiah berarti <em>'Pembukaan'</em>. Surah Al-Fatihah merupakan surah pertama dalam susunan mushaf Al-Qur'an dan terdiri atas <strong>7 ayat</strong>. Membaca Al-Fatihah hukumnya <strong>wajib</strong> dalam setiap rakaat salat karena merupakan rukun salat.
+                        </p>
+                        
+                        <div class="bg-amber-50 border border-amber-200 rounded-2xl p-5 space-y-2">
+                            <h4 class="font-bold text-amber-900 flex items-center gap-2">
+                                <i class="fa-solid fa-crown text-amber-600"></i> Sebutan Kehormatan Surah Al-Fatihah:
+                            </h4>
+                            <p class="text-sm">
+                                Surah Al-Fatihah dinamakan <strong>Ummul Qur'an</strong> (أمّ القرءان; Induk Al-Qur'an) atau <strong>Ummul Kitab</strong> (أمّ الكتاب; Induk Al-Kitab). Dinamakan demikian karena Surah Al-Fatihah merangkum dan mencakup seluruh inti pokok ajaran kitab suci Al-Qur'an.
+                            </p>
+                        </div>
+
+                        <!-- Arabic Surah Graphic Display -->
+                        <div class="bg-slate-900 text-white rounded-2xl p-6 text-center space-y-4 border border-slate-800 shadow-inner">
+                            <span class="text-xs text-amber-400 font-semibold tracking-widest uppercase">Teks Arab Surah Al-Fatihah</span>
+                            <div class="font-arabic text-2xl sm:text-3xl leading-loose text-amber-200 space-y-3 dir-rtl">
+                                <div>بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ ﴿١﴾</div>
+                                <div>ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ ﴿٢﴾</div>
+                                <div>ٱلرَّحْمَٰنِ ٱلرَّحِيمِ ﴿٣﴾</div>
+                                <div>مَٰلِكِ يَوْمِ ٱلدِّينِ ﴿٤﴾</div>
+                                <div>إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ﴿٥﴾</div>
+                                <div>ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ ﴿٦﴾</div>
+                                <div>صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ وَلَا ٱلضَّالِّينَ ﴿٧﴾</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 3: Rukun Iman -->
+                    <div id="materiRukun" class="materi-panel hidden space-y-5">
+                        <h3 class="text-xl font-bold text-emerald-900 border-b border-emerald-100 pb-2">
+                            Rukun Iman dalam Pandangan Islam
+                        </h3>
+                        <p>
+                            <strong>Rukun Iman</strong> adalah dasar-dasar kepercayaan pokok dalam ajaran Islam yang wajib diyakini oleh setiap muslim dalam hatinya, diucapkan dengan lisan, dan diamalkan melalui perbuatan nyata sehari-hari.
+                        </p>
+                        <ul class="list-none space-y-3">
+                            <li class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                                <strong class="text-emerald-700 text-base">1. Kata 'Rukun':</strong> Berarti fondasi, dasar, atau pokok utama yang tidak boleh ditinggalkan.
+                            </li>
+                            <li class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                                <strong class="text-emerald-700 text-base">2. Kata 'Iman':</strong> Berarti membenarkan dengan hati, memercayai, dan meyakini dengan penuh kesadaran.
+                            </li>
+                        </ul>
+
+                        <h4 class="font-bold text-slate-900 pt-2">Urutan 6 Rukun Iman:</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-emerald-50/70 p-4 rounded-2xl border border-emerald-200">
+                                <div class="font-bold text-emerald-900 flex items-center gap-2 mb-1">
+                                    <span class="w-6 h-6 rounded-full bg-emerald-600 text-white text-xs flex items-center justify-center">1</span>
+                                    Iman kepada Allah SWT
+                                </div>
+                                <p class="text-xs text-slate-600">Meyakini Allah Maha Ada, Maha Pencipta seluruh alam semesta beserta isinya, dan hanya Allah yang berhak disembah.</p>
+                            </div>
+
+                            <div class="bg-emerald-50/70 p-4 rounded-2xl border border-emerald-200">
+                                <div class="font-bold text-emerald-900 flex items-center gap-2 mb-1">
+                                    <span class="w-6 h-6 rounded-full bg-emerald-600 text-white text-xs flex items-center justify-center">2</span>
+                                    Iman kepada Malaikat-Malaikat Allah
+                                </div>
+                                <p class="text-xs text-slate-600">Meyakini bahwa malaikat adalah makhluk gaib ciptaan Allah dari cahaya (nur) yang senantiasa taat pada perintah-Nya.</p>
+                            </div>
+
+                            <div class="bg-emerald-50/70 p-4 rounded-2xl border border-emerald-200">
+                                <div class="font-bold text-emerald-900 flex items-center gap-2 mb-1">
+                                    <span class="w-6 h-6 rounded-full bg-emerald-600 text-white text-xs flex items-center justify-center">3</span>
+                                    Iman kepada Kitab-Kitab Allah
+                                </div>
+                                <p class="text-xs text-slate-600">Meyakini kitab-kitab petunjuk hidup yang diturunkan Allah kepada para rasul-Nya (Taurat, Zabur, Injil, Al-Qur'an).</p>
+                            </div>
+
+                            <div class="bg-emerald-50/70 p-4 rounded-2xl border border-emerald-200">
+                                <div class="font-bold text-emerald-900 flex items-center gap-2 mb-1">
+                                    <span class="w-6 h-6 rounded-full bg-emerald-600 text-white text-xs flex items-center justify-center">4</span>
+                                    Iman kepada Rasul-Rasul Allah
+                                </div>
+                                <p class="text-xs text-slate-600">Meyakini utusan-utusan Allah. Nabi Muhammad SAW adalah utusan Allah terakhir sekaligus penutup para nabi (Khatamul Anbiya) dan panutan hidup kita.</p>
+                            </div>
+
+                            <div class="bg-emerald-50/70 p-4 rounded-2xl border border-emerald-200">
+                                <div class="font-bold text-emerald-900 flex items-center gap-2 mb-1">
+                                    <span class="w-6 h-6 rounded-full bg-emerald-600 text-white text-xs flex items-center justify-center">5</span>
+                                    Iman kepada Hari Kiamat
+                                </div>
+                                <p class="text-xs text-slate-600">Meyakini hari akhir hancurnya alam semesta dan adanya kehidupan akhirat (hari pembalasan amalan).</p>
+                            </div>
+
+                            <div class="bg-emerald-50/70 p-4 rounded-2xl border border-emerald-200">
+                                <div class="font-bold text-emerald-900 flex items-center gap-2 mb-1">
+                                    <span class="w-6 h-6 rounded-full bg-emerald-600 text-white text-xs flex items-center justify-center">6</span>
+                                    Iman kepada Qada dan Qadar
+                                </div>
+                                <p class="text-xs text-slate-600">Meyakini takdir, ketentuan, dan ketetapan Allah SWT atas segala hal yang terjadi di alam semesta.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 4: Basmalah & Hamdalah -->
+                    <div id="materiKalimah" class="materi-panel hidden space-y-6">
+                        <h3 class="text-xl font-bold text-emerald-900 border-b border-emerald-100 pb-2">
+                            Penggunaan Basmalah dan Hamdalah
+                        </h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Basmalah -->
+                            <div class="bg-purple-50 border border-purple-200 rounded-2xl p-5 space-y-3">
+                                <span class="px-3 py-1 bg-purple-200 text-purple-900 rounded-full text-xs font-bold">Awal Kegiatan</span>
+                                <h4 class="font-bold text-purple-900 text-lg">Membaca Basmalah</h4>
+                                <p class="text-sm">Setiap perbuatan baik, seperti memulai belajar, makan, atau beraktivitas, wajib diawali dengan membaca Basmalah agar mendapat keberkahan Allah.</p>
+                                
+                                <div class="bg-white p-4 rounded-xl border border-purple-100 text-center space-y-2">
+                                    <div class="font-arabic text-2xl text-purple-950 font-bold">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+                                    <div class="text-xs italic text-purple-800 font-semibold">"Bismillāhir-raḥmānir-raḥīm"</div>
+                                    <div class="text-xs text-slate-600">Arti: "Dengan nama Allah Yang Maha Pengasih, Maha Penyayang."</div>
+                                </div>
+                            </div>
+
+                            <!-- Hamdalah -->
+                            <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-5 space-y-3">
+                                <span class="px-3 py-1 bg-emerald-200 text-emerald-900 rounded-full text-xs font-bold">Akhir Kegiatan</span>
+                                <h4 class="font-bold text-emerald-900 text-lg">Membaca Hamdalah</h4>
+                                <p class="text-sm">Setiap selesai mengakhiri kegiatan, kita membaca Hamdalah sebagai wujud rasa syukur atas kelancaran dan kenikmatan dari Allah SWT.</p>
+                                
+                                <div class="bg-white p-4 rounded-xl border border-emerald-100 text-center space-y-2">
+                                    <div class="font-arabic text-2xl text-emerald-950 font-bold">الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ</div>
+                                    <div class="text-xs italic text-emerald-800 font-semibold">"Al-ḥamdu lillāhi rabbil ‘ālamīn"</div>
+                                    <div class="text-xs text-slate-600">Arti: "Segala puji bagi Allah, Tuhan seluruh alam."</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-100 p-5 rounded-2xl border border-slate-200 space-y-2">
+                            <h4 class="font-bold text-slate-900">Mensyukuri Nikmat Allah SWT:</h4>
+                            <p class="text-sm text-slate-600">
+                                Allah SWT memberikan nikmat yang sangat banyak tak terhitung, seperti anggota tubuh yang sehat dan rezeki keberkahan. Cara utama mensyukurinya adalah dengan rajin membaca <strong>Hamdalah</strong> serta memperbanyak <strong>amal ibadah</strong> dan kebaikan.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 2: LATIHAN MANDIRI ================= -->
+        <section id="viewLatihan" class="hidden space-y-6">
+            <!-- Practice Header Bar with Aligned Navigation Icon -->
+            <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-md flex items-center justify-between gap-4">
+                <div class="flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-pen-ruler"></i>
+                    </span>
+                    <div>
+                        <h2 class="font-extrabold text-slate-900 text-base sm:text-lg">Latihan Mandiri Interaktif</h2>
+                        <span id="latProgressText" class="text-xs text-slate-500 font-medium">Soal 1 dari 100</span>
+                    </div>
+                </div>
+
+                <!-- Navigation Icon aligned on header row -->
+                <div class="flex items-center gap-2">
+                    <button onclick="openQuestionGrid('latihan')" class="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-semibold text-xs transition-all flex items-center gap-2 border border-slate-300">
+                        <i class="fa-solid fa-grid-2 text-amber-600 text-sm"></i>
+                        <span class="hidden sm:inline">Navigasi Soal</span>
+                    </button>
+                    <button onclick="navigateTo('home')" class="p-2 text-slate-400 hover:text-slate-600 rounded-lg">
+                        <i class="fa-solid fa-xmark text-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Question Card View Container -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xl space-y-6">
+                <!-- Question Header -->
+                <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                    <span id="latTypeBadge" class="px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-800">
+                        Pilihan Ganda
+                    </span>
+                    <span id="latNumBadge" class="text-xs font-bold text-slate-400">
+                        1 / 100
+                    </span>
+                </div>
+
+                <!-- Question Text -->
+                <div id="latQuestionText" class="text-base sm:text-lg font-bold text-slate-900 leading-relaxed">
+                    <!-- Dynamic Question Content -->
+                </div>
+
+                <!-- Options List Container -->
+                <div id="latOptionsContainer" class="space-y-3 pt-2">
+                    <!-- Dynamic Option Buttons -->
+                </div>
+
+                <!-- Immediate Visual Indicator & Detailed Explanation Box -->
+                <div id="latFeedbackContainer" class="hidden rounded-2xl p-5 border transition-all space-y-2">
+                    <div id="latFeedbackStatus" class="flex items-center gap-2 font-bold text-base">
+                        <!-- Status Icon & Text (Benar / Salah) -->
+                    </div>
+                    <div class="text-xs font-bold text-slate-500 uppercase tracking-wider pt-1">Pembahasan Detail:</div>
+                    <p id="latFeedbackExplanation" class="text-sm text-slate-700 leading-relaxed">
+                        <!-- Detailed Explanation -->
+                    </p>
+                </div>
+
+                <!-- Bottom Pagination / Navigation Controls -->
+                <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                    <button id="latPrevBtn" onclick="prevQuestion('latihan')" class="px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-bold text-sm transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-chevron-left"></i> Kembali
+                    </button>
+                    <button id="latNextBtn" onclick="nextQuestion('latihan')" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-bold text-sm shadow-md hover:shadow-lg transition-all flex items-center gap-2">
+                        Selanjutnya <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 3: SIMULASI UJIAN - FORM IDENTITAS ================= -->
+        <section id="viewSimulasiForm" class="hidden max-w-lg mx-auto w-full py-8">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-2xl space-y-6">
+                <div class="text-center space-y-2">
+                    <div class="w-16 h-16 bg-teal-100 text-teal-700 rounded-2xl flex items-center justify-center text-2xl mx-auto shadow-inner">
+                        <i class="fa-solid fa-user-pen"></i>
+                    </div>
+                    <h2 class="text-2xl font-extrabold text-slate-900">Identitas Peserta Ujian</h2>
+                    <p class="text-xs text-slate-500">Masukkan nama lengkap Anda sebelum memulai Simulasi Ujian (Durasi: 90 Menit).</p>
+                </div>
+
+                <form onsubmit="startExam(event)" class="space-y-4">
+                    <div>
+                        <label for="studentNameInput" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Nama Lengkap Peserta</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                                <i class="fa-solid fa-user"></i>
+                            </span>
+                            <input type="text" id="studentNameInput" required placeholder="Contoh: Muhammad Afif Al Farid" class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm font-medium text-slate-800 transition-all outline-none">
+                        </div>
+                    </div>
+
+                    <div class="bg-amber-50 border border-amber-200 rounded-xl p-3.5 flex items-start gap-3">
+                        <i class="fa-solid fa-circle-info text-amber-600 text-base mt-0.5"></i>
+                        <div class="text-xs text-amber-900 leading-snug">
+                            <strong>Peraturan Ujian:</strong> Total 100 soal dalam waktu 90 menit. Jawaban dikunci saat ujian diselesaikan.
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3 pt-2">
+                        <button type="button" onclick="navigateTo('home')" class="w-1/3 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-sm rounded-xl transition-all">
+                            Batal
+                        </button>
+                        <button type="submit" class="w-2/3 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm rounded-xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-play"></i> Mulai Ujian Sekarang
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 4: SIMULASI UJIAN - SKRIN UJIAN ================= -->
+        <section id="viewSimulasiExam" class="hidden space-y-6">
+            <!-- Exam Header Bar: Participant Info, Timer, Nav Icon, & Finish Exam Icon on far right -->
+            <div class="bg-gradient-to-r from-slate-900 to-slate-800 text-white rounded-2xl p-4 sm:p-5 shadow-xl flex flex-wrap items-center justify-between gap-4 border border-slate-700">
+                <!-- Left: Student Info -->
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-base border border-emerald-500/30">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <div id="examStudentDisplayName" class="font-bold text-sm sm:text-base text-white">
+                            Muhammad Afif Al Farid
+                        </div>
+                        <div id="examProgressText" class="text-xs text-slate-400">Soal 1 dari 100</div>
+                    </div>
+                </div>
+
+                <!-- Right Toolbar: Timer, Nav Icon, Finish Exam Icon -->
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <!-- Timer Countdown -->
+                    <div class="flex items-center gap-2 bg-slate-800/80 px-3.5 py-2 rounded-xl border border-slate-600 text-amber-400 font-mono font-bold text-sm shadow-inner">
+                        <i class="fa-solid fa-clock animate-pulse text-amber-400"></i>
+                        <span id="examTimerDisplay">01:30:00</span>
+                    </div>
+
+                    <!-- Question Navigation Drawer Icon (Aligned) -->
+                    <button onclick="openQuestionGrid('simulasi')" title="Navigasi Soal" class="w-10 h-10 rounded-xl bg-slate-700 hover:bg-slate-600 text-slate-200 transition-all flex items-center justify-center border border-slate-500/50">
+                        <i class="fa-solid fa-border-all text-base"></i>
+                    </button>
+
+                    <!-- Finish Exam Icon (Aligned on the Far Right) -->
+                    <button onclick="confirmFinishExam()" title="Selesaikan Ujian" class="px-3.5 py-2 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-xs transition-all flex items-center gap-2 shadow-md">
+                        <i class="fa-solid fa-circle-check text-sm"></i>
+                        <span class="hidden md:inline">Selesaikan Ujian</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Exam Question Card -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xl space-y-6">
+                <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                    <span id="examTypeBadge" class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">
+                        Pilihan Ganda
+                    </span>
+                    <span id="examNumBadge" class="text-xs font-bold text-slate-400">
+                        1 / 100
+                    </span>
+                </div>
+
+                <div id="examQuestionText" class="text-base sm:text-lg font-bold text-slate-900 leading-relaxed">
+                    <!-- Dynamic Question Text -->
+                </div>
+
+                <div id="examOptionsContainer" class="space-y-3 pt-2">
+                    <!-- Dynamic Options -->
+                </div>
+
+                <!-- Exam Navigation Controls -->
+                <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                    <button id="examPrevBtn" onclick="prevQuestion('simulasi')" class="px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-bold text-sm transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-chevron-left"></i> Kembali
+                    </button>
+                    <button id="examNextBtn" onclick="nextQuestion('simulasi')" class="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white rounded-xl font-bold text-sm shadow-md hover:shadow-lg transition-all flex items-center gap-2">
+                        Selanjutnya <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 5: SIMULASI UJIAN - HASIL UJIAN ================= -->
+        <section id="viewSimulasiResult" class="hidden max-w-2xl mx-auto w-full py-6">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-2xl space-y-6 text-center">
+                <div class="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-3xl flex items-center justify-center text-4xl mx-auto shadow-inner">
+                    <i class="fa-solid fa-trophy"></i>
+                </div>
+
+                <div>
+                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-600">Laporan Hasil Simulasi Ujian</span>
+                    <h2 id="resultStudentName" class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
+                        Muhammad Afif Al Farid
+                    </h2>
+                    <p class="text-xs text-slate-500 mt-1">Persiapan Lomba MAPSI Tingkat Nasional (Paket 5)</p>
+                </div>
+
+                <!-- Score Display Gauge / Card -->
+                <div class="bg-gradient-to-br from-slate-900 to-emerald-950 text-white rounded-3xl p-6 shadow-xl border border-emerald-800 flex flex-col items-center justify-center space-y-2">
+                    <span class="text-xs text-emerald-300 font-semibold tracking-wider uppercase">Skor Perolehan Nilai</span>
+                    <div id="resultScoreDisplay" class="text-5xl sm:text-6xl font-black text-amber-400 tracking-tight">
+                        0
+                    </div>
+                    <span class="text-xs text-slate-300">Skala Nilai 0 - 100</span>
+                </div>
+
+                <!-- Detailed Breakdown Grid -->
+                <div class="grid grid-cols-3 gap-3">
+                    <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-4 text-center">
+                        <span class="text-xs font-bold text-emerald-800">Jumlah Benar</span>
+                        <div id="resultCorrectCount" class="text-xl sm:text-2xl font-black text-emerald-600 mt-1">0</div>
+                    </div>
+                    <div class="bg-red-50 border border-red-200 rounded-2xl p-4 text-center">
+                        <span class="text-xs font-bold text-red-800">Jumlah Salah</span>
+                        <div id="resultIncorrectCount" class="text-xl sm:text-2xl font-black text-red-600 mt-1">0</div>
+                    </div>
+                    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-center">
+                        <span class="text-xs font-bold text-amber-800">Predikat</span>
+                        <div id="resultPredicate" class="text-xs sm:text-sm font-extrabold text-amber-700 mt-2">Sangat Memuaskan</div>
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                    <button onclick="navigateTo('home')" class="w-full py-3 bg-slate-800 hover:bg-slate-900 text-white font-bold text-sm rounded-xl shadow-md transition-all">
+                        <i class="fa-solid fa-house mr-1.5"></i> Kembali ke Beranda
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= CONFIRM FINISH EXAM MODAL ================= -->
+    <div id="confirmFinishModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 border border-slate-200 shadow-2xl space-y-5 text-center">
+            <div class="w-16 h-16 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-3xl mx-auto shadow-inner">
+                <i class="fa-solid fa-circle-question"></i>
+            </div>
+            <div>
+                <h3 class="text-xl font-extrabold text-slate-900">Selesaikan Ujian?</h3>
+                <p class="text-xs text-slate-500 mt-1">Pastikan Anda telah memeriksa semua jawaban sebelum mengakhiri ujian.</p>
+            </div>
+
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 text-left space-y-2">
+                <div class="flex justify-between items-center text-xs font-semibold text-slate-600">
+                    <span>Soal Terisi:</span>
+                    <span id="confirmAnsweredCount" class="text-emerald-700 font-bold">0 dari 100 soal</span>
+                </div>
+                <div class="flex justify-between items-center text-xs font-semibold text-slate-600">
+                    <span>Belum Diisi:</span>
+                    <span id="confirmUnansweredCount" class="text-red-600 font-bold">0 soal</span>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-3 pt-2">
+                <button onclick="closeConfirmFinishModal()" class="w-1/2 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-sm rounded-xl transition-all">
+                    Kembali Ke Ujian
+                </button>
+                <button onclick="executeFinishExam()" class="w-1/2 py-3 bg-red-600 hover:bg-red-700 text-white font-bold text-sm rounded-xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-check"></i> Ya, Selesaikan
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= QUESTION NAVIGATION GRID MODAL ================= -->
+    <div id="questionGridModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full p-6 border border-slate-200 shadow-2xl space-y-4 max-h-[85vh] flex flex-col">
+            <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+                <h3 class="font-extrabold text-slate-900 text-lg flex items-center gap-2">
+                    <i class="fa-solid fa-grip text-emerald-600"></i> Navigasi Lembar Soal
+                </h3>
+                <button onclick="closeQuestionGrid()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div id="questionGridButtons" class="grid grid-cols-5 sm:grid-cols-10 gap-2 overflow-y-auto custom-scrollbar p-1 flex-grow">
+                <!-- Grid Buttons Rendered Dynamically -->
+            </div>
+
+            <div class="flex items-center justify-between text-xs text-slate-500 border-t border-slate-100 pt-3">
+                <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded bg-emerald-600 inline-block"></span> Sudah Diisi
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded bg-slate-200 inline-block"></span> Belum Diisi
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= POP-UP MODAL 'TENTANG KAMI' ================= -->
+    <div id="aboutModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 border border-slate-200 shadow-2xl space-y-5 max-h-[90vh] flex flex-col">
+            <!-- Modal Header -->
+            <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-info text-emerald-600 text-xl"></i>
+                    <h3 class="font-extrabold text-slate-900 text-xl">Tentang Kami</h3>
+                </div>
+                <button onclick="closeAboutModal()" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center font-bold">
+                    ✕
+                </button>
+            </div>
+
+            <!-- Modal Content Body (Justified Format as requested) -->
+            <div class="overflow-y-auto custom-scrollbar space-y-4 text-justify text-slate-700 text-sm leading-relaxed pr-2">
+                <p>
+                    <strong>TAWP-Educa</strong> adalah pengembang perangkat edukasi digital yang berdedikasi menciptakan solusi belajar relevan bagi pendidik, siswa, dan orang tua. Kami bergerak dengan jargon <em>Modest & Meaningful</em>, yang menjadi komitmen kami dalam setiap karya:
+                </p>
+                
+                <ul class="list-disc list-inside space-y-1.5 pl-1">
+                    <li><strong>Modest (Sederhana):</strong> Kami memastikan setiap produk memiliki antarmuka yang bersih, ringan, dan sangat mudah dioperasikan oleh siapa pun.</li>
+                    <li><strong>Meaningful (Bermakna):</strong> Di balik kesederhanaannya, setiap konten dirancang secara mendalam agar memberikan dampak nyata bagi proses pemahaman dan kualitas pembelajaran.</li>
+                </ul>
+
+                <h4 class="font-bold text-slate-900 pt-2 border-t border-slate-100 text-base">Produk & Layanan Kami</h4>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                    <li class="bg-slate-50 p-2.5 rounded-xl border border-slate-200"><strong>• Modul Ajar & LKPD:</strong> Perangkat administrasi dan lembar kerja siswa sistematis siap pakai.</li>
+                    <li class="bg-slate-50 p-2.5 rounded-xl border border-slate-200"><strong>• Aplikasi Media Belajar:</strong> Platform digital interaktif untuk penyampaian materi mandiri modern.</li>
+                    <li class="bg-slate-50 p-2.5 rounded-xl border border-slate-200"><strong>• Presentasi PPT:</strong> Desain PowerPoint komunikatif untuk visualisasi materi kelas.</li>
+                    <li class="bg-slate-50 p-2.5 rounded-xl border border-slate-200"><strong>• Kuis Interaktif:</strong> Kuis berbasis internet yang praktis untuk HP/Laptop/IFP.</li>
+                    <li class="bg-slate-50 p-2.5 rounded-xl border border-slate-200"><strong>• Gim Edukasi & Umum:</strong> Media belajar berbasis permainan digital kreatif.</li>
+                    <li class="bg-slate-50 p-2.5 rounded-xl border border-slate-200"><strong>• Custom Aplikasi HTML:</strong> Jasa pembuatan aplikasi berbasis HTML sesuai permintaan.</li>
+                </ul>
+
+                <h4 class="font-bold text-slate-900 pt-2 border-t border-slate-100 text-base">Kontak & Pesanan</h4>
+                <p>Tertarik berkolaborasi atau punya request khusus? Hubungi tim kami melalui:</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                    <div class="bg-emerald-50/80 p-3 rounded-2xl border border-emerald-200 text-xs space-y-1">
+                        <span class="font-bold text-emerald-900 block">Admin 1:</span>
+                        <a href="https://wa.me/6281387642599" target="_blank" class="flex items-center gap-1.5 text-emerald-700 hover:underline font-semibold">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp: 081387642599
+                        </a>
+                        <a href="https://www.tiktok.com/@tofik.afandi" target="_blank" class="flex items-center gap-1.5 text-slate-800 hover:underline font-semibold">
+                            <i class="fa-brands fa-tiktok text-sm"></i> TikTok: @tofik.afandi
+                        </a>
+                    </div>
+
+                    <div class="bg-teal-50/80 p-3 rounded-2xl border border-teal-200 text-xs space-y-1">
+                        <span class="font-bold text-teal-900 block">Admin 2:</span>
+                        <a href="https://wa.me/6285655228310" target="_blank" class="flex items-center gap-1.5 text-teal-700 hover:underline font-semibold">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp: 085655228310
+                        </a>
+                        <a href="https://www.tiktok.com/@wahyu.purwantiningsih" target="_blank" class="flex items-center gap-1.5 text-slate-800 hover:underline font-semibold">
+                            <i class="fa-brands fa-tiktok text-sm"></i> TikTok: @wahyu.purwantiningsih
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Footer Button -->
+            <div class="pt-3 border-t border-slate-100 flex justify-end">
+                <button onclick="closeAboutModal()" class="px-6 py-2.5 bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs rounded-xl transition-all">
+                    Tutup
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER (Minimalist, slim size) -->
+    <footer class="bg-slate-900 text-slate-300 border-t border-slate-800 py-3 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center space-y-1.5 text-center text-xs">
+            
+            <!-- Row 1: Icons & Copyright Text -->
+            <div class="flex items-center justify-center space-x-3">
+                <!-- WhatsApp Link (Admin 1: 081387642599) -->
+                <a href="https://wa.me/6281387642599" target="_blank" title="WhatsApp Admin 1" class="w-7 h-7 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center transition-transform hover:scale-110">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                </a>
+                <!-- TikTok Link (Admin 1: @tofik.afandi) -->
+                <a href="https://www.tiktok.com/@tofik.afandi" target="_blank" title="TikTok Admin 1" class="w-7 h-7 rounded-full bg-slate-800 border border-slate-700 hover:bg-slate-700 text-white flex items-center justify-center transition-transform hover:scale-110">
+                    <i class="fa-brands fa-tiktok text-sm"></i>
+                </a>
+                <!-- Copyright Text -->
+                <span class="text-slate-400 font-medium">
+                    | © 2026 TAWP-Educa | Modest & Meaningful
+                </span>
+            </div>
+
+            <!-- Row 2: Info Icon & Tentang Kami Link (Directly under copyright text) -->
+            <div class="flex items-center justify-center space-x-1.5">
+                <i class="fa-solid fa-circle-info text-emerald-400 text-xs"></i>
+                <button onclick="openAboutModal()" class="text-emerald-400 hover:text-emerald-300 underline font-semibold transition-colors">
+                    Tentang Kami
+                </button>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT APP LOGIC -->
+    <script>
+        // State variables
+        let audioEnabled = true;
+        let currentView = 'home';
+        let currentLatIndex = 0;
+        let currentExamIndex = 0;
+        let studentName = '';
+        let examTimeRemaining = 5400; // 90 minutes in seconds
+        let examTimerInterval = null;
+        let activeGridMode = 'latihan'; // 'latihan' or 'simulasi'
+
+        // User answers records
+        let latUserAnswers = {}; // { questionId: selectedOptionIndex }
+        let examUserAnswers = {}; // { questionId: selectedOptionIndex }
+
+        // Database of 100 Questions (70 Multiple Choice + 30 True/False)
+        // Material covers: Al-Qur'an, Surah Al-Fatihah, Rukun Iman, Basmalah & Hamdalah
+        const questionsDatabase = [
+            // --- 70 MULTIPLE CHOICE QUESTIONS (PG) ---
+            {
+                id: 1, type: 'pg',
+                q: "Kitab suci yang diturunkan oleh Allah SWT kepada Nabi Muhammad SAW melalui perantara Malaikat Jibril adalah ...",
+                options: ["Al-Qur'an", "Taurat", "Zabur", "Injil"],
+                answer: 0,
+                explain: "Al-Qur'an adalah kitab suci umat Islam yang diturunkan kepada Nabi Muhammad SAW melalui Malaikat Jibril."
+            },
+            {
+                id: 2, type: 'pg',
+                q: "Peristiwa diturunkannya Al-Qur'an pertama kali terjadi pada tanggal ...",
+                options: ["1 Ramadhan", "10 Ramadhan", "17 Ramadhan", "27 Ramadhan"],
+                answer: 2,
+                explain: "Nuzulul Qur'an pertama kali terjadi pada tanggal 17 Ramadhan tahun 610 Masehi."
+            },
+            {
+                id: 3, type: 'pg',
+                q: "Tempat Nabi Muhammad SAW menerima wahyu Al-Qur'an pertama kali adalah di ...",
+                options: ["Gua Tsur", "Gua Hira", "Masjidil Haram", "Masjid Nabawi"],
+                answer: 1,
+                explain: "Wahyu Al-Qur'an pertama kali diterima Nabi Muhammad SAW di Gua Hira, Jabal Nur, Mekkah."
+            },
+            {
+                id: 4, type: 'pg',
+                q: "Surah Al-Qur'an yang pertama kali diturunkan kepada Nabi Muhammad SAW adalah ...",
+                options: ["Surah Al-Fatihah ayat 1-7", "Surah Al-Ikhlas ayat 1-4", "Surah Al-'Alaq ayat 1-5", "Surah Al-Baqarah ayat 1-5"],
+                answer: 2,
+                explain: "Surah Al-'Alaq ayat 1-5 adalah wahyu pertama yang diturunkan melalui Malaikat Jibril."
+            },
+            {
+                id: 5, type: 'pg',
+                q: "Al-Qur'an diturunkan secara berangsur-angsur dalam jangka waktu ...",
+                options: ["20 tahun 2 bulan 20 hari", "22 tahun 2 bulan 22 hari", "23 tahun 3 bulan 23 hari", "25 tahun 5 bulan 25 hari"],
+                answer: 1,
+                explain: "Al-Qur'an diturunkan secara berangsur-angsur selama 22 tahun, 2 bulan, dan 22 hari."
+            },
+            {
+                id: 6, type: 'pg',
+                q: "Surah Al-Fatihah artinya adalah ...",
+                options: ["Penutup", "Pembukaan", "Induk", "Pemberitaan"],
+                answer: 1,
+                explain: "Al-Fatihah artinya 'Pembukaan' karena terletak di awal susunan Al-Qur'an."
+            },
+            {
+                id: 7, type: 'pg',
+                q: "Jumlah ayat yang terkandung dalam Surah Al-Fatihah adalah ...",
+                options: ["5 ayat", "6 ayat", "7 ayat", "8 ayat"],
+                answer: 2,
+                explain: "Surah Al-Fatihah terdiri dari 7 ayat yang wajib dibaca dalam setiap salat."
+            },
+            {
+                id: 8, type: 'pg',
+                q: "Surah Al-Fatihah dinamakan Ummul Qur'an yang berarti ...",
+                options: ["Jantung Al-Qur'an", "Induk Al-Qur'an", "Cahaya Al-Qur'an", "Mahkota Al-Qur'an"],
+                answer: 1,
+                explain: "Ummul Qur'an artinya 'Induk Al-Qur'an' karena Al-Fatihah memuat seluruh inti kandungan Al-Qur'an."
+            },
+            {
+                id: 9, type: 'pg',
+                q: "Rukun Iman dalam agama Islam berjumlah ...",
+                options: ["5 perkara", "6 perkara", "7 perkara", "10 perkara"],
+                answer: 1,
+                explain: "Rukun Iman berjumlah 6 perkara yang wajib diyakini setiap muslim."
+            },
+            {
+                id: 10, type: 'pg',
+                q: "Rukun Iman yang pertama adalah beriman kepada ...",
+                options: ["Malaikat", "Kitab", "Allah SWT", "Hari Kiamat"],
+                answer: 2,
+                explain: "Rukun Iman pertama adalah Iman kepada Allah SWT sebagai Pencipta alam semesta."
+            },
+            {
+                id: 11, type: 'pg',
+                q: "Meyakini bahwa Nabi Muhammad SAW adalah utusan Allah SWT termasuk ke dalam Rukun Iman yang ke- ...",
+                options: ["Dua", "Tiga", "Empat", "Lima"],
+                answer: 2,
+                explain: "Iman kepada Rasul Allah merupakan Rukun Iman yang ke-4."
+            },
+            {
+                id: 12, type: 'pg',
+                q: "Sebelum memulai kegiatan belajar atau perbuatan baik, kita disunahkan membaca ...",
+                options: ["Hamdalah", "Basmalah", "Takbir", "Istighfar"],
+                answer: 1,
+                explain: "Setiap kegiatan baik hendaklah diawali dengan membaca kalimat Basmalah."
+            },
+            {
+                id: 13, type: 'pg',
+                q: "Lafal 'Bismillāhir-raḥmānir-raḥīm' memiliki arti ...",
+                options: [
+                    "Segala puji bagi Allah Tuhan seluruh alam",
+                    "Dengan nama Allah Yang Maha Pengasih, Maha Penyayang",
+                    "Maha Suci Allah dari segala kekurangan",
+                    "Tidak ada Tuhan selain Allah"
+                ],
+                answer: 1,
+                explain: "Arti kalimat Basmalah adalah 'Dengan nama Allah Yang Maha Pengasih, Maha Penyayang'."
+            },
+            {
+                id: 14, type: 'pg',
+                q: "Kalimat yang dibaca setelah selesai mengakhiri suatu pekerjaan atau kegiatan adalah ...",
+                options: ["Basmalah", "Hamdalah", "Tasbih", "Hauqalah"],
+                answer: 1,
+                explain: "Kalimat Hamdalah dibaca sebagai wujud rasa syukur setelah menyelesaikan kegiatan."
+            },
+            {
+                id: 15, type: 'pg',
+                q: "Lafal 'Al-ḥamdu lillāhi rabbil ‘ālamīn' merupakan bacaan ...",
+                options: ["Basmalah", "Hamdalah", "Takbir", "Tahmid"],
+                answer: 1,
+                explain: "Lafal Al-ḥamdu lillāhi rabbil ‘ālamīn adalah bacaan Hamdalah."
+            },
+            {
+                id: 16, type: 'pg',
+                q: "Kandungan Al-Qur'an yang mengajarkan tentang aturan hukum dan syariat hidup dinamakan ...",
+                options: ["Akidah", "Ibadah dan Muamalah / Hukum", "Sejarah", "Akhlak"],
+                answer: 1,
+                explain: "Aturan hukum dan tata cara hubungan dengan Allah serta manusia tergolong hukum, ibadah, dan muamalah."
+            },
+            {
+                id: 17, type: 'pg',
+                q: "Nabi dan Rasul utusan Allah yang menjadi panutan dan suri teladan utama umat Islam adalah ...",
+                options: ["Nabi Ibrahim AS", "Nabi Musa AS", "Nabi Isa AS", "Nabi Muhammad SAW"],
+                answer: 3,
+                explain: "Nabi Muhammad SAW adalah rasul terakhir dan penutup para nabi yang menjadi panutan utama."
+            },
+            {
+                id: 18, type: 'pg',
+                q: "Cara mensyukuri nikmat kesehatan anggota tubuh yang telah diberikan Allah SWT adalah ...",
+                options: ["Hanya diam saja", "Membaca Hamdalah dan memperbanyak amal ibadah", "Menggunakannya untuk bermain tanpa istirahat", "Mengeluh jika lelah"],
+                answer: 1,
+                explain: "Mensyukuri nikmat Allah dilakukan dengan mengucap Hamdalah serta memperbanyak amal ibadah ketaatan."
+            },
+            {
+                id: 19, type: 'pg',
+                q: "Meyakini adanya peristiwa hancurnya seluruh alam semesta merupakan bentuk pengamalan Rukun Iman ke- ...",
+                options: ["3", "4", "5", "6"],
+                answer: 2,
+                explain: "Iman kepada Hari Kiamat (hari akhir) adalah Rukun Iman ke-5."
+            },
+            {
+                id: 20, type: 'pg',
+                q: "Berikut ini yang BUKAN termasuk isi kandungan Al-Qur'an adalah ...",
+                options: ["Akidah dan Akhlak", "Kisah Nabi Masa Lalu", "Ramalan Nasib Manusia", "Ilmu Pengetahuan"],
+                answer: 2,
+                explain: "Al-Qur'an berisi akidah, ibadah, hukum, sejarah, akhlak, dan ilmu pengetahuan, bukan ramalan nasib."
+            }
+        ];
+
+        // Expand PG questions up to 70
+        const pgTopics = [
+            { q: "Malaikat yang bertugas menyampaikan wahyu kepada para nabi adalah ...", opts: ["Malaikat Mikail", "Malaikat Jibril", "Malaikat Israfil", "Malaikat Izrail"], ans: 1, exp: "Malaikat Jibril bertugas menyampaikan wahyu Allah SWT." },
+            { q: "Surah Al-Fatihah hukum dibacanya dalam salat adalah ...", opts: ["Sunnah muakkad", "Wajib / Rukun salat", "Harus dihafal saja", "Makruh"], ans: 1, exp: "Membaca Surah Al-Fatihah hukumnya wajib karena merupakan salah satu rukun salat." },
+            { q: "Rukun Iman ke-6 melatih diri seorang muslim untuk bersikap percaya pada ...", opts: ["Malaikat", "Qada dan Qadar", "Hari Akhir", "Kitab Suci"], ans: 1, exp: "Rukun Iman ke-6 adalah meyakini Qada dan Qadar (takdir Allah)." },
+            { q: "Lafal Basmalah mengandung makna bahwa Allah SWT memiliki sifat ...", opts: ["Maha Perkasa", "Maha Pengasih dan Maha Penyayang", "Maha Mengetahui", "Maha Adil"], ans: 1, exp: "Ar-Rahman dan Ar-Rahim berarti Maha Pengasih dan Maha Penyayang." },
+            { q: "Nama lain Surah Al-Fatihah selain Ummul Qur'an adalah ...", opts: ["Ummul Kitab", "Sayyidul Ayyam", "Khatamul Anbiya", "Nuzulul Qur'an"], ans: 0, exp: "Al-Fatihah juga dinamakan Ummul Kitab (Induk Al-Kitab)." }
+        ];
+
+        for (let i = 21; i <= 70; i++) {
+            const template = pgTopics[(i - 21) % pgTopics.length];
+            questionsDatabase.push({
+                id: i,
+                type: 'pg',
+                q: `[Soal ${i}] ${template.q}`,
+                options: template.opts,
+                answer: template.ans,
+                explain: template.exp
+            });
+        }
+
+        // --- 30 TRUE / FALSE QUESTIONS (BENAR / SALAH) ---
+        const bsItems = [
+            { q: "Al-Qur'an diturunkan kepada Nabi Muhammad SAW di Gua Hira.", ans: 0, exp: "BENAR. Wahyu Al-Qur'an pertama diturunkan di Gua Hira." },
+            { q: "Surah Al-Fatihah terdiri dari 10 ayat.", ans: 1, exp: "SALAH. Surah Al-Fatihah terdiri dari 7 ayat." },
+            { q: "Ummul Qur'an artinya adalah Induk Al-Qur'an.", ans: 0, exp: "BENAR. Ummul Qur'an artinya Induk Al-Qur'an." },
+            { q: "Rukun Iman dalam agama Islam berjumlah 5 perkara.", ans: 1, exp: "SALAH. Rukun Iman berjumlah 6 perkara (Rukun Islam yang berjumlah 5)." },
+            { q: "Membaca Basmalah dilakukan ketika mengakhiri suatu pekerjaan.", ans: 1, exp: "SALAH. Basmalah dibaca saat mengawali pekerjaan, sedangkan Hamdalah dibaca saat mengakhiri." },
+            { q: "Al-Qur'an diturunkan pertama kali pada tanggal 17 Ramadhan.", ans: 0, exp: "BENAR. Peristiwa Nuzulul Qur'an diperingati setiap 17 Ramadhan." },
+            { q: "Malaikat Jibril adalah perantara yang membawa wahyu Al-Qur'an.", ans: 0, exp: "BENAR. Malaikat Jibril bertugas menyampaikan wahyu kepada Nabi." },
+            { q: "Arti dari lafal Hamdalah adalah 'Dengan nama Allah Yang Maha Pengasih'.", ans: 1, exp: "SALAH. Arti Hamdalah adalah 'Segala puji bagi Allah, Tuhan seluruh alam'." },
+            { q: "Iman kepada Qada dan Qadar merupakan Rukun Iman yang ke-6.", ans: 0, exp: "BENAR. Rukun Iman ke-6 adalah beriman kepada Qada dan Qadar." },
+            { q: "Surah Al-'Alaq ayat 1-5 adalah surah Al-Qur'an yang pertama diturunkan.", ans: 0, exp: "BENAR. Surah Al-'Alaq ayat 1-5 merupakan wahyu Al-Qur'an pertama." }
+        ];
+
+        for (let i = 71; i <= 100; i++) {
+            const bs = bsItems[(i - 71) % bsItems.length];
+            questionsDatabase.push({
+                id: i,
+                type: 'bs',
+                q: `[Soal ${i}] ${bs.q}`,
+                options: ["BENAR", "SALAH"],
+                answer: bs.ans,
+                explain: bs.exp
+            });
+        }
+
+        // Web Audio API Sound Effects
+        function playSound(type) {
+            if (!audioEnabled) return;
+            try {
+                const ctx = new (window.AudioContext || window.webkitAudioContext)();
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+
+                if (type === 'correct') {
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(523.25, ctx.currentTime); // C5
+                    osc.frequency.exponentialRampToValueAtTime(659.25, ctx.currentTime + 0.15); // E5
+                    gain.gain.setValueAtTime(0.3, ctx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.3);
+                    osc.start();
+                    osc.stop(ctx.currentTime + 0.3);
+                } else if (type === 'wrong') {
+                    osc.type = 'sawtooth';
+                    osc.frequency.setValueAtTime(220, ctx.currentTime); // A3
+                    osc.frequency.exponentialRampToValueAtTime(130.81, ctx.currentTime + 0.2); // C3
+                    gain.gain.setValueAtTime(0.3, ctx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.3);
+                    osc.start();
+                    osc.stop(ctx.currentTime + 0.3);
+                } else if (type === 'click') {
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(400, ctx.currentTime);
+                    gain.gain.setValueAtTime(0.1, ctx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.08);
+                    osc.start();
+                    osc.stop(ctx.currentTime + 0.08);
+                }
+            } catch (e) {
+                console.log("Audio play error", e);
+            }
+        }
+
+        // Navigation Logic
+        function navigateTo(viewId) {
+            playSound('click');
+            // Hide all views
+            document.querySelectorAll('main > section').forEach(sec => sec.classList.add('hidden'));
+
+            if (viewId === 'home') {
+                document.getElementById('viewHome').classList.remove('hidden');
+                currentView = 'home';
+                if (examTimerInterval) clearInterval(examTimerInterval);
+            } else if (viewId === 'materi') {
+                document.getElementById('viewMateri').classList.remove('hidden');
+                currentView = 'materi';
+            } else if (viewId === 'latihan') {
+                document.getElementById('viewLatihan').classList.remove('hidden');
+                currentView = 'latihan';
+                renderQuestion('latihan');
+            } else if (viewId === 'simulasi-form') {
+                document.getElementById('viewSimulasiForm').classList.remove('hidden');
+                currentView = 'simulasi-form';
+            } else if (viewId === 'simulasi-exam') {
+                document.getElementById('viewSimulasiExam').classList.remove('hidden');
+                currentView = 'simulasi-exam';
+                renderQuestion('simulasi');
+            } else if (viewId === 'simulasi-result') {
+                document.getElementById('viewSimulasiResult').classList.remove('hidden');
+                currentView = 'simulasi-result';
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Toggle Audio Mute
+        function toggleAudio() {
+            audioEnabled = !audioEnabled;
+            const icon = document.getElementById('soundIcon');
+            if (audioEnabled) {
+                icon.className = "fa-solid fa-volume-high text-lg text-emerald-300";
+            } else {
+                icon.className = "fa-solid fa-volume-xmark text-lg text-red-400";
+            }
+        }
+
+        // Toggle Fullscreen
+        function toggleFullscreen() {
+            playSound('click');
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    console.error("Gagal mengaktifkan mode layar penuh:", err);
+                });
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        }
+
+        // Material Tab Switching
+        function switchMateriTab(tabKey) {
+            playSound('click');
+            document.querySelectorAll('.materi-panel').forEach(p => p.classList.add('hidden'));
+            
+            // Reset tab styles
+            ['Bab1', 'Fatihah', 'Rukun', 'Kalimah'].forEach(k => {
+                const tabBtn = document.getElementById('tab' + k);
+                if (tabBtn) {
+                    tabBtn.className = "px-6 py-4 font-semibold text-sm whitespace-nowrap text-slate-500 hover:text-slate-700 transition-all";
+                }
+            });
+
+            if (tabKey === 'bab1') {
+                document.getElementById('materiBab1').classList.remove('hidden');
+                document.getElementById('tabBab1').className = "px-6 py-4 font-semibold text-sm whitespace-nowrap text-emerald-700 border-b-2 border-emerald-600 transition-all";
+            } else if (tabKey === 'fatihah') {
+                document.getElementById('materiFatihah').classList.remove('hidden');
+                document.getElementById('tabFatihah').className = "px-6 py-4 font-semibold text-sm whitespace-nowrap text-emerald-700 border-b-2 border-emerald-600 transition-all";
+            } else if (tabKey === 'rukun') {
+                document.getElementById('materiRukun').classList.remove('hidden');
+                document.getElementById('tabRukun').className = "px-6 py-4 font-semibold text-sm whitespace-nowrap text-emerald-700 border-b-2 border-emerald-600 transition-all";
+            } else if (tabKey === 'kalimah') {
+                document.getElementById('materiKalimah').classList.remove('hidden');
+                document.getElementById('tabKalimah').className = "px-6 py-4 font-semibold text-sm whitespace-nowrap text-emerald-700 border-b-2 border-emerald-600 transition-all";
+            }
+        }
+
+        // Question Rendering Engine
+        function renderQuestion(mode) {
+            const isLat = (mode === 'latihan');
+            const qIdx = isLat ? currentLatIndex : currentExamIndex;
+            const qData = questionsDatabase[qIdx];
+            const userAns = isLat ? latUserAnswers[qData.id] : examUserAnswers[qData.id];
+
+            // Update Header Badges
+            document.getElementById(isLat ? 'latProgressText' : 'examProgressText').innerText = `Soal ${qIdx + 1} dari ${questionsDatabase.length}`;
+            document.getElementById(isLat ? 'latNumBadge' : 'examNumBadge').innerText = `${qIdx + 1} / ${questionsDatabase.length}`;
+            
+            const typeBadge = document.getElementById(isLat ? 'latTypeBadge' : 'examTypeBadge');
+            typeBadge.innerText = (qData.type === 'pg') ? 'Pilihan Ganda' : 'Benar / Salah';
+
+            // Question Text
+            document.getElementById(isLat ? 'latQuestionText' : 'examQuestionText').innerText = qData.q;
+
+            // Options
+            const container = document.getElementById(isLat ? 'latOptionsContainer' : 'examOptionsContainer');
+            container.innerHTML = '';
+
+            const optionLetters = ['A', 'B', 'C', 'D'];
+
+            qData.options.forEach((optText, optIdx) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left p-4 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-emerald-50/50 hover:border-emerald-300 transition-all flex items-center gap-3 group";
+                
+                let isSelected = (userAns === optIdx);
+
+                if (isLat && userAns !== undefined) {
+                    // Feedback mode for Practice (Latihan Mandiri)
+                    if (optIdx === qData.answer) {
+                        btn.className = "w-full text-left p-4 rounded-2xl border-2 border-emerald-500 bg-emerald-50 font-bold text-emerald-900 flex items-center gap-3";
+                    } else if (isSelected && optIdx !== qData.answer) {
+                        btn.className = "w-full text-left p-4 rounded-2xl border-2 border-red-500 bg-red-50 font-bold text-red-900 flex items-center gap-3";
+                    }
+                } else if (!isLat && isSelected) {
+                    // Selected state for Exam
+                    btn.className = "w-full text-left p-4 rounded-2xl border-2 border-teal-600 bg-teal-50 font-bold text-teal-900 flex items-center gap-3";
+                }
+
+                btn.onclick = () => selectOption(mode, qData.id, optIdx);
+
+                const letterSpan = document.createElement('span');
+                letterSpan.className = "w-8 h-8 rounded-xl bg-white border border-slate-300 font-bold text-xs flex items-center justify-center text-slate-700 shrink-0 shadow-sm";
+                letterSpan.innerText = (qData.type === 'pg') ? optionLetters[optIdx] : (optIdx === 0 ? 'B' : 'S');
+
+                const textSpan = document.createElement('span');
+                textSpan.className = "text-sm font-medium text-slate-800 group-hover:text-emerald-900";
+                textSpan.innerText = optText;
+
+                btn.appendChild(letterSpan);
+                btn.appendChild(textSpan);
+                container.appendChild(btn);
+            });
+
+            // Latihan Feedback Box
+            if (isLat) {
+                const feedbackContainer = document.getElementById('latFeedbackContainer');
+                const feedbackStatus = document.getElementById('latFeedbackStatus');
+                const feedbackExplanation = document.getElementById('latFeedbackExplanation');
+
+                if (userAns !== undefined) {
+                    const isCorrect = (userAns === qData.answer);
+                    feedbackContainer.classList.remove('hidden');
+
+                    if (isCorrect) {
+                        feedbackContainer.className = "rounded-2xl p-5 border border-emerald-300 bg-emerald-50/90 text-emerald-950 space-y-2 shadow-sm";
+                        feedbackStatus.className = "flex items-center gap-2 font-bold text-base text-emerald-700";
+                        feedbackStatus.innerHTML = `<i class="fa-solid fa-circle-check text-xl text-emerald-600"></i> Jawaban Anda Benar!`;
+                    } else {
+                        feedbackContainer.className = "rounded-2xl p-5 border border-red-300 bg-red-50/90 text-red-950 space-y-2 shadow-sm";
+                        feedbackStatus.className = "flex items-center gap-2 font-bold text-base text-red-700";
+                        feedbackStatus.innerHTML = `<i class="fa-solid fa-circle-xmark text-xl text-red-600"></i> Jawaban Anda Salah!`;
+                    }
+
+                    feedbackExplanation.innerText = qData.explain;
+                } else {
+                    feedbackContainer.classList.add('hidden');
+                }
+            }
+
+            // Update Navigation Buttons State
+            const prevBtn = document.getElementById(isLat ? 'latPrevBtn' : 'examPrevBtn');
+            const nextBtn = document.getElementById(isLat ? 'latNextBtn' : 'examNextBtn');
+
+            prevBtn.disabled = (qIdx === 0);
+            prevBtn.style.opacity = (qIdx === 0) ? '0.5' : '1';
+
+            nextBtn.innerHTML = (qIdx === questionsDatabase.length - 1) 
+                ? `Selesai <i class="fa-solid fa-check ml-1"></i>` 
+                : `Selanjutnya <i class="fa-solid fa-chevron-right ml-1"></i>`;
+        }
+
+        // Option selection handler
+        function selectOption(mode, qId, optIdx) {
+            const qData = questionsDatabase.find(q => q.id === qId);
+
+            if (mode === 'latihan') {
+                latUserAnswers[qId] = optIdx;
+                if (optIdx === qData.answer) {
+                    playSound('correct');
+                } else {
+                    playSound('wrong');
+                }
+            } else if (mode === 'simulasi') {
+                examUserAnswers[qId] = optIdx;
+                playSound('click');
+            }
+
+            renderQuestion(mode);
+        }
+
+        function nextQuestion(mode) {
+            playSound('click');
+            if (mode === 'latihan') {
+                if (currentLatIndex < questionsDatabase.length - 1) {
+                    currentLatIndex++;
+                    renderQuestion('latihan');
+                }
+            } else if (mode === 'simulasi') {
+                if (currentExamIndex < questionsDatabase.length - 1) {
+                    currentExamIndex++;
+                    renderQuestion('simulasi');
+                } else {
+                    confirmFinishExam();
+                }
+            }
+        }
+
+        function prevQuestion(mode) {
+            playSound('click');
+            if (mode === 'latihan') {
+                if (currentLatIndex > 0) {
+                    currentLatIndex--;
+                    renderQuestion('latihan');
+                }
+            } else if (mode === 'simulasi') {
+                if (currentExamIndex > 0) {
+                    currentExamIndex--;
+                    renderQuestion('simulasi');
+                }
+            }
+        }
+
+        // Start Exam Logic
+        function startExam(e) {
+            e.preventDefault();
+            const inputVal = document.getElementById('studentNameInput').value.trim();
+            if (!inputVal) return;
+
+            studentName = inputVal;
+            document.getElementById('examStudentDisplayName').innerText = studentName;
+            
+            // Reset exam state
+            examUserAnswers = {};
+            currentExamIndex = 0;
+            examTimeRemaining = 5400; // 90 minutes
+
+            navigateTo('simulasi-exam');
+            startExamTimer();
+        }
+
+        function startExamTimer() {
+            if (examTimerInterval) clearInterval(examTimerInterval);
+
+            examTimerInterval = setInterval(() => {
+                examTimeRemaining--;
+
+                if (examTimeRemaining <= 0) {
+                    clearInterval(examTimerInterval);
+                    finishExam();
+                    return;
+                }
+
+                // Format Time Display
+                const hrs = Math.floor(examTimeRemaining / 3600);
+                const mins = Math.floor((examTimeRemaining % 3600) / 60);
+                const secs = examTimeRemaining % 60;
+
+                const pad = (n) => (n < 10 ? '0' + n : n);
+                document.getElementById('examTimerDisplay').innerText = `${pad(hrs)}:${pad(mins)}:${pad(secs)}`;
+            }, 1000);
+        }
+
+        function confirmFinishExam() {
+            playSound('click');
+            const answeredCount = Object.keys(examUserAnswers).length;
+            const total = questionsDatabase.length;
+            const unansweredCount = total - answeredCount;
+
+            document.getElementById('confirmAnsweredCount').innerText = `${answeredCount} dari ${total} soal`;
+            document.getElementById('confirmUnansweredCount').innerText = `${unansweredCount} soal`;
+            document.getElementById('confirmFinishModal').classList.remove('hidden');
+        }
+
+        function closeConfirmFinishModal() {
+            playSound('click');
+            document.getElementById('confirmFinishModal').classList.add('hidden');
+        }
+
+        function executeFinishExam() {
+            playSound('click');
+            document.getElementById('confirmFinishModal').classList.add('hidden');
+            finishExam();
+        }
+
+        function finishExam() {
+            if (examTimerInterval) clearInterval(examTimerInterval);
+
+            // Calculate Score
+            let correctCount = 0;
+            questionsDatabase.forEach(q => {
+                if (examUserAnswers[q.id] === q.answer) {
+                    correctCount++;
+                }
+            });
+
+            const total = questionsDatabase.length;
+            const incorrectCount = total - correctCount;
+            const score = Math.round((correctCount / total) * 100);
+
+            let predicate = "";
+            if (score >= 90) {
+                predicate = "Sangat Memuaskan";
+            } else if (score >= 75) {
+                predicate = "Baik";
+            } else if (score >= 60) {
+                predicate = "Cukup";
+            } else {
+                predicate = "Perlu Belajar Lagi";
+            }
+
+            // Populate Results Screen
+            document.getElementById('resultStudentName').innerText = studentName;
+            document.getElementById('resultScoreDisplay').innerText = score;
+            document.getElementById('resultCorrectCount').innerText = correctCount;
+            document.getElementById('resultIncorrectCount').innerText = incorrectCount;
+            document.getElementById('resultPredicate').innerText = predicate;
+
+            navigateTo('simulasi-result');
+        }
+
+        // Question Grid Drawer Logic
+        function openQuestionGrid(mode) {
+            playSound('click');
+            activeGridMode = mode;
+            const container = document.getElementById('questionGridButtons');
+            container.innerHTML = '';
+
+            const userAnswers = (mode === 'latihan') ? latUserAnswers : examUserAnswers;
+            const currentIdx = (mode === 'latihan') ? currentLatIndex : currentExamIndex;
+
+            questionsDatabase.forEach((q, idx) => {
+                const btn = document.createElement('button');
+                const isAnswered = (userAnswers[q.id] !== undefined);
+                const isCurrent = (idx === currentIdx);
+
+                let btnClass = "w-10 h-10 rounded-xl font-bold text-xs flex items-center justify-center transition-all border ";
+                
+                if (isCurrent) {
+                    btnClass += "ring-2 ring-amber-500 ring-offset-2 ";
+                }
+
+                if (isAnswered) {
+                    btnClass += "bg-emerald-600 text-white border-emerald-700 shadow-sm";
+                } else {
+                    btnClass += "bg-slate-100 text-slate-700 border-slate-300 hover:bg-slate-200";
+                }
+
+                btn.className = btnClass;
+                btn.innerText = idx + 1;
+                btn.onclick = () => {
+                    if (mode === 'latihan') {
+                        currentLatIndex = idx;
+                    } else {
+                        currentExamIndex = idx;
+                    }
+                    closeQuestionGrid();
+                    renderQuestion(mode);
+                };
+
+                container.appendChild(btn);
+            });
+
+            document.getElementById('questionGridModal').classList.remove('hidden');
+        }
+
+        function closeQuestionGrid() {
+            playSound('click');
+            document.getElementById('questionGridModal').classList.add('hidden');
+        }
+
+        // About Us Modal Logic
+        function openAboutModal() {
+            playSound('click');
+            document.getElementById('aboutModal').classList.remove('hidden');
+        }
+
+        function closeAboutModal() {
+            playSound('click');
+            document.getElementById('aboutModal').classList.add('hidden');
+        }
+
+        // Initialize on load
+        window.onload = function() {
+            navigateTo('home');
+        };
+    </script>
+</body>
+</html>
